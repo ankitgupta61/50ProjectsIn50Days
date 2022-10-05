@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+/* importing google font. we can import it into css or link to our html file before linking css file */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 97vw;
+  /* flex: 0.5; */
+}
+.movieWebsite {
+  background-image: url(./images/MovieWebsite.png);
+}
+.commentSection {
+  background-image: url(./images/YotubeLikeNestedCommentSection.png);
+}
+.toDoApp {
+  background-image: url(./images/toDoApp.png);
+}
+.portfolio {
+  background-image: url(./images/Portfolio.png);
+}
+.panel {
+  background-size: auto 100%;
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+  border: 1px;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  flex: 0.2;
+  margin: 10px;
+  transition: flex 0.7s ease-in-out;
+  /* width: 80vh; */
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.7s 0.4s;
+}
+.panel :nth-child(1) {
+  color: rgb(206, 2, 29);
+}
+.panel :nth-child(1) :hover {
+  font-size: bold;
+  color: rgb(79, 4, 255);
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
+
+.panel.active {
+  flex: 5;
+  background-size: contain;
+}
+
+@media (max-width: 550px) {
+  .movieWebsite {
+    background-image: url(./imagesMobileView/MovieWebsite.png);
+  }
+  .panel h3 {
+    bottom: 20px;
+  }
+  .commentSection {
+    background-image: url(./imagesMobileView/nestedComment.png);
+  }
+  .toDoApp {
+    background-image: url(./imagesMobileView/toDoApp.png);
+  }
+  .portfolio {
+    background-image: url(./imagesMobileView/portfolio.png);
+  }
+}
